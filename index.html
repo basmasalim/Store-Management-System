@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Store Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="container-fluid p-4">
+        <nav>
+            <figure class="d-flex align-items-center">
+                <img src="assets/favicon.ico" alt="ico">
+                <figcaption>
+                    <h1>Store <span class="text-danger">Management</span></h1>
+                </figcaption>
+            </figure>
+        </nav>
+        <section class="w-75 mx-auto pt-2">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control border-0 border-bottom shadow-none " id="productName" placeholder="productName">
+                <label for="productName" class="text-capitalize">product name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control border-0 border-bottom shadow-none " id="productPrice" placeholder="productPrice">
+                <label for="productPrice" class="text-capitalize">product price</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input list="categoryOptions" type="text" class="form-control border-0 border-bottom shadow-none" id="productCategory" placeholder="productCategory">
+                <label for="productCategory" class="text-capitalize">product category</label>
+                <datalist id="categoryOptions">
+                    <option value="Books"></option>
+                    <option value="Grocery"></option>
+                    <option value="TV"></option>
+                    <option value="Mobile"></option>
+                    <option value="Laptop"></option>
+                    <option value="Furniture"></option>
+                    <option value="Clothing"></option>
+                    <option value="Electronics"></option>
+                    <option value="Appliances"></option>
+                </datalist>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control border-0 border-bottom shadow-none" id="productDescription" placeholder="productDescription"></textarea>
+                <label for="productDescription" class="text-capitalize">product description</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="file" class="form-control border-0 border-bottom shadow-none " id="productImage" placeholder="productImage">
+                <label for="productImage" class="text-capitalize">product image</label>
+            </div>
+
+            <div>
+                <button id="addProductbtn" type="button" class="btn btn-danger">Add Product</button>
+            </div>
+        </section>
+
+        <section class="w-75 mx-auto py-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <figure class="product rounded-3 shadow-lg p-3">
+                        <img src="assets/images/1.jpg" alt="product image" class="w-100">
+                        <figcaption class="mt-2">
+                            <h2 class="h5">Product Name</h2>
+                            <p class="text-muted mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ratione.</p>
+                            <h3 class="h6">
+                                <span class="fw-bold text-capitalize">price :</span> 4000
+                            </h3>
+                            <h3 class="h6">
+                                <span class="fw-bold text-capitalize">category :</span> Tv
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <figure class="product rounded-3 shadow-lg p-3">
+                        <img src="assets/images/2.jpg" alt="product image" class="w-100">
+                        <figcaption class="mt-2">
+                            <h2 class="h5">Product Name</h2>
+                            <p class="text-muted mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ratione.</p>
+                            <h3 class="h6">
+                                <span class="fw-bold text-capitalize">price :</span> 4000
+                            </h3>
+                            <h3 class="h6">
+                                <span class="fw-bold text-capitalize">category :</span> Tv
+                            </h3>
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
