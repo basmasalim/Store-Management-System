@@ -22,15 +22,18 @@
         </nav>
         <section class="w-75 mx-auto pt-2">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control border-0 border-bottom shadow-none " id="productName" placeholder="productName">
+                <input type="text" class="form-control border-0 border-bottom shadow-none" id="productName" placeholder="productName" oninput="validateForm(this)">
+                <p class="d-none alert alert-danger text-capitalize py-1">the name should be in capital letters</p>
                 <label for="productName" class="text-capitalize">product name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="number" class="form-control border-0 border-bottom shadow-none " id="productPrice" placeholder="productPrice">
+                <input type="number" class="form-control border-0 border-bottom shadow-none " id="productPrice" placeholder="productPrice" oninput="validateForm(this)">
+                <p class="d-none alert alert-danger text-capitalize py-1">product price should be a number</p>
                 <label for="productPrice" class="text-capitalize">product price</label>
             </div>
             <div class="form-floating mb-3">
-                <input list="categoryOptions" type="text" class="form-control border-0 border-bottom shadow-none" id="productCategory" placeholder="productCategory">
+                <input list="categoryOptions" type="text" class="form-control border-0 border-bottom shadow-none" id="productCategory" placeholder="productCategory" oninput="validateForm(this)">
+                <p class="d-none alert alert-danger text-capitalize py-1">product category should be in the list</p>
                 <label for="productCategory" class="text-capitalize">product category</label>
                 <datalist id="categoryOptions">
                     <option value="Books"></option>
@@ -45,7 +48,8 @@
                 </datalist>
             </div>
             <div class="form-floating mb-3">
-                <textarea type="text" class="form-control border-0 border-bottom shadow-none" id="productDescription" placeholder="productDescription"></textarea>
+                <textarea type="text" class="form-control border-0 border-bottom shadow-none" id="productDescription" placeholder="productDescription" oninput="validateForm(this)"></textarea>
+                <p class="d-none alert alert-danger text-capitalize py-1">the description should be in capital letters</p>
                 <label for="productDescription" class="text-capitalize">product description</label>
             </div>
             <div class="form-floating mb-3">
@@ -55,43 +59,15 @@
 
             <div>
                 <button id="addProductbtn" type="button" class="btn btn-danger">Add Product</button>
+                <button id="updateProductbtn" class="d-none btn btn-warning text-capitalize fw-semibold">update Product</button>
             </div>
         </section>
 
         <section class="w-75 mx-auto py-5">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6">
-                    <figure class="product rounded-3 shadow-lg p-3">
-                        <img src="assets/images/1.jpg" alt="product image" class="w-100">
-                        <figcaption class="mt-2">
-                            <h2 class="h5">Product Name</h2>
-                            <p class="text-muted mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ratione.</p>
-                            <h3 class="h6">
-                                <span class="fw-bold text-capitalize">price :</span> 4000
-                            </h3>
-                            <h3 class="h6">
-                                <span class="fw-bold text-capitalize">category :</span> Tv
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <figure class="product rounded-3 shadow-lg p-3">
-                        <img src="assets/images/2.jpg" alt="product image" class="w-100">
-                        <figcaption class="mt-2">
-                            <h2 class="h5">Product Name</h2>
-                            <p class="text-muted mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ratione.</p>
-                            <h3 class="h6">
-                                <span class="fw-bold text-capitalize">price :</span> 4000
-                            </h3>
-                            <h3 class="h6">
-                                <span class="fw-bold text-capitalize">category :</span> Tv
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-
+            <div>
+                <input oninput="searchProduct()" name="searchbyName" type="search" placeholder="Search by Name" class="form-control mb-4" id="SearchbyName">
             </div>
+            <div class="row g-4" id="productArea"></div>
         </section>
     </main>
 
